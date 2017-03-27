@@ -232,8 +232,7 @@ endif
 
 # Generates the dispatch tables
 # XXX: Depend on 0.38.1 for:
-# gen_dispatch_py = files('src/gen_dispatch.py')
-gen_dispatch_py = join_paths(meson.source_root(), 'src/gen_dispatch.py')
+gen_dispatch_py = files('src/gen_dispatch.py')
 
 gl_registry = files('registry/gl.xml')
 egl_registry = files('registry/egl.xml')

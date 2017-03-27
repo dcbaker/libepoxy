@@ -1,4 +1,4 @@
-headers = [ 'common.h' ]
+headers = [ files('common.h') ]
 
 # GL is always generated
 generated_headers = [ [ 'gl.h', 'gl_generated.h', gl_registry ] ]
@@ -36,7 +36,7 @@ foreach g: generated_headers
                             install_dir: join_paths(epoxy_includedir, 'epoxy'))
 
   gen_headers += [ generated ]
-  headers += [ header ]
+  headers += [ files(header) ]
 endforeach
 
 install_headers(headers, subdir: 'epoxy')
